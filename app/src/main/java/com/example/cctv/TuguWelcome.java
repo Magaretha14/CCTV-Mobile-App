@@ -22,8 +22,8 @@ import java.net.URL;
 public class TuguWelcome extends AppCompatActivity {
     ImageView back;
     VideoView vtuguwelcome;
-    //PlayerView playerView;
-    //ExoPlayer exoPlayer;
+    PlayerView playerView;
+    ExoPlayer exoPlayer;
 
 
     @Override
@@ -31,17 +31,8 @@ public class TuguWelcome extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tugu_welcome);
 
-        back = findViewById(R.id.ddback);
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(TuguWelcome.this, MainActivity.class);
-                startActivity(intent);
-            }
-        });
 
-
-        /*String videoUrl = "https://mam.jogjaprov.go.id/stream?vid=72ec0137-a011-4cd2-b2c3-71c39614fcec&c=0.3496628867523708";
+        String videoUrl = "https://mam.jogjaprov.go.id:1937/atcs-kota/SimpangAmongrogoTimur.stream/playlist.m3u8";
 
 
         exoPlayer = new ExoPlayer.Builder(this).build();
@@ -51,7 +42,7 @@ public class TuguWelcome extends AppCompatActivity {
         exoPlayer.addMediaItem(mediaItem);
         exoPlayer.prepare();
         exoPlayer.setPlayWhenReady(true);
-        //exoPlayer.play();*/
+        //exoPlayer.play();
 
     }
 }
